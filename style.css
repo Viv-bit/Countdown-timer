@@ -28,17 +28,48 @@ body{
     font-weight: 500;
     letter-spacing: 3px;
 }
-#countdown{
+#countDown{
     display: flex;
     justify-content: center;
-   
-    
 }
 .time{
     color: hsl(237, 18%, 59%);
     font-size: 14px;
     letter-spacing: 2px;
     padding: 0 30px;
+}
+.timer {
+    color: hsl(345, 95%, 68%);
+    height: 80px;
+    width: 100px;
+    background-color: hsl(235, 20%, 25%);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 4em;
+    overflow: hidden;
+    position: relative;
+}
+.timer::before, .timer::after{
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 6;
+
+}
+.timer::before{
+    left: -5px;
+}
+.timer::after{
+    right: -5px;
+}
+.timer > div{
+    position: absolute;
+    left: 0;
+    right: 0;
 }
 footer{
     background-image: url(./images/pattern-hills.svg);
